@@ -2,20 +2,6 @@
   require_once 'Math.class.php';
   class addUp extends Math {
 
-    public function __construct($firstValue, $secondValue = false) {
-
-      if (is_array($firstValue)) {
-        $this->setMultipleValues($firstValue);
-        $this->setFirstValue(false);
-      }
-
-      else {
-        $this->setFirstValue($firstValue);
-        $this->setSecondValue($secondValue);
-      }
-    }
-
-
     /**
      * Ads up the first and the second value and returns if
      * @return [float] [The result from the math]

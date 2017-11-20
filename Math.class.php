@@ -11,6 +11,7 @@
       $this->operationResult = 0;
       $this->firstValue = null;
       $this->secondValue = null;
+
       $this->arrayValues = false;
 
       if (is_array($firstValue)) {
