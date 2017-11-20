@@ -4,7 +4,7 @@
 
   $MathOperation = new Operation(1, 3);
 
-  echo $MathOperation->add();
+  echo $MathOperation->addUp();
   echo "<br>";
   echo $MathOperation->subTract();
 
