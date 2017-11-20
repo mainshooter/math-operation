@@ -21,17 +21,6 @@
       }
     }
 
-    protected function checkIfWeHaveMoreThanTwoValues() {
-      if ($this->arrayValues == false) {
-        // We don't have 2 values
-        return(false);
-      }
-
-      else if (is_array($this->arrayValues)){
-        return(true);
-      }
-    }
-
     public function getOperationResult() {
       return($this->operationResult);
     }
