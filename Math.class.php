@@ -1,6 +1,6 @@
 <?php
 
-  class Math {
+  abstract class Math {
     private $firstValue;
     private $secondValue;
 
