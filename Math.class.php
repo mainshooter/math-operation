@@ -3,11 +3,25 @@
   abstract class Math {
     private $firstValue;
     private $secondValue;
+    private $arrayValues;
     private $operationResult;
 
-    public function __construct() {
+
+    public function __construct($firstValue, $secondValue = false) {
+      $this->operationResult = 0;
       $this->firstValue = null;
       $this->secondValue = null;
+      $this->arrayValues = false;
+
+      if (is_array($firstValue)) {
+        $this->setMultipleValues($firstValue);
+        $this->setFirstValue(false);
+      }
+
+      else {
+        $this->setFirstValue($firstValue);
+        $this->setSecondValue($secondValue);
+      }
     }
 
     public function getOperationResult() {
@@ -23,6 +37,14 @@
      */
     protected function setFirstValue($value) {
       $this->firstValue = $value;
+    }
+
+    protected function setMultipleValues($valueArrays) {
+      $this->arrayValues = $valueArrays;
+    }
+
+    public function getMultipleValues() {
+      return($this->arrayValues);
     }
 
     /**

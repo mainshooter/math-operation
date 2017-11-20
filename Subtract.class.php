@@ -8,19 +8,35 @@
      * @param [float] $firstValue  [The first value]
      * @param [float] $secondValue [The second value]
      */
-    public function __construct($firstValue, $secondValue) {
-      $this->operationResult = null;
+    public function __construct($firstValue, $secondValue = false) {
+      if (is_array($firstValue)) {
+        $this->setMultipleValues($firstValue);
+        $this->setFirstValue(false);
+      }
 
-      $this->setFirstValue($firstValue);
-      $this->setSecondValue($secondValue);
+      else {
+        $this->setFirstValue($firstValue);
+        $this->setSecondValue($secondValue);
+      }
     }
 
     /**
-     * Substract the first from the second setted value
-     * @return [float] [The result of the math]
+     * Ads up the first and the second value and returns if
+     * @return [float] [The result from the math]
      */
     public function calculate() {
-      $this->setOperationResult($this->getFirstValue() - $this->getSecondValue());
+      if ($this->getMultipleValues() == false) {
+        $this->setOperationResult($this->getFirstValue() - $this->getSecondValue());
+        return($this->getOperationResult());
+      }
+
+      else {
+        // We want to do it with multiple values
+        $this->setOperationResult($this->getOperationResult()[0]);
+        for ($i=1; $i < count($this->getMultipleValues()); $i++) {
+          $this->setOperationResult($this->getOperationResult() - $this->getMultipleValues()[$i]);
+        }
+      }
       return($this->getOperationResult());
     }
   }
