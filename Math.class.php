@@ -29,14 +29,14 @@
       return($this->operationResult);
     }
 
-    protected function setOperationResult($result) {
+    private function setOperationResult($result) {
       $this->operationResult = $result;
     }
 
     /**
      * Sets the first value of the math we will do
      */
-    protected function setFirstValue($value) {
+    private function setFirstValue($value) {
       $this->firstValue = $value;
     }
 
@@ -59,7 +59,7 @@
     /**
      * Sets the second vlaue of our math
      */
-    protected function setSecondValue($value) {
+    private function setSecondValue($value) {
       $this->secondValue = $value;
     }
 
