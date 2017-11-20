@@ -14,8 +14,8 @@
       return($this->operationResult);
     }
 
-    public function setOperationResult($result) {
-      $this->operationResult = $result
+    protected function setOperationResult($result) {
+      $this->operationResult = $result;
     }
 
     /**
