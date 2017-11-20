@@ -2,7 +2,6 @@
   require_once 'Math.class.php';
 
   class Subtract extends Math {
-    private $operationResult;
 
     /**
      * Runs on defining the class and sets the first and second value
@@ -20,9 +19,9 @@
      * Substract the first from the second setted value
      * @return [float] [The result of the math]
      */
-    public function subTract() {
-      $this->operationResult = $this->getFirstValue() - $this->getSecondValue();
-      return($this->operationResult);
+    public function calculate() {
+      $this->setOperationResult($this->getFirstValue() - $this->getSecondValue());
+      return($this->getOperationResult());
     }
   }
 

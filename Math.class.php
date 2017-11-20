@@ -3,10 +3,19 @@
   abstract class Math {
     private $firstValue;
     private $secondValue;
+    private $operationResult;
 
     public function __construct() {
       $this->firstValue = null;
       $this->secondValue = null;
+    }
+
+    public function getOperationResult() {
+      return($this->operationResult);
+    }
+
+    public function setOperationResult($result) {
+      $this->operationResult = $result
     }
 
     /**
