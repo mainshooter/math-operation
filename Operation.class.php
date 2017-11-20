@@ -4,8 +4,11 @@
   class Operation extends Math {
     private $operationResult;
 
-    public function __construct() {
+    public function __construct($firstValue, $secondValue) {
       $this->operationResult = null;
+
+      $this->setFirstValue($firstValue);
+      $this->setSecondValue($secondValue);
     }
 
     public function subTract() {

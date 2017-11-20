@@ -9,7 +9,7 @@
       $this->secondValue = null;
     }
 
-    public function setFirstValue($value) {
+    protected function setFirstValue($value) {
       $this->firstValue = $value;
     }
 
@@ -17,7 +17,7 @@
       return($this->firstValue);
     }
 
-    public function setSecondValue($value) {
+    protected function setSecondValue($value) {
       $this->secondValue = $value;
     }
 
