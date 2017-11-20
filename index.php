@@ -1,12 +1,14 @@
 <?php
 
-  require_once 'Operation.class.php';
+  require_once 'Addup.class.php';
+  require_once 'Subtract.class.php';
 
-  $MathOperation = new Operation(1, 3);
+  $AddUp = new addUp(1, 3);
+  $Subtract = new Subtract(1, 3);
 
-  echo $MathOperation->addUp();
+  echo $AddUp->addUp();
   echo "<br>";
-  echo $MathOperation->subTract();
+  echo $Subtract->subTract();
 
 
 ?>
