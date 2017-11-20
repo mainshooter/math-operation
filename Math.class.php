@@ -12,7 +12,6 @@
 
       if (is_array($firstValue)) {
         $this->setMultipleValues($firstValue);
-        $this->setFirstValue(false);
       }
 
       else {
