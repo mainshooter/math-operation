@@ -1,16 +1,12 @@
 <?php
 
   abstract class Math {
-    private $firstValue;
-    private $secondValue;
     private $arrayValues;
     private $operationResult;
 
 
     public function __construct($firstValue, $secondValue = false) {
       $this->operationResult = 0;
-      $this->firstValue = null;
-      $this->secondValue = null;
 
       $this->arrayValues = false;
 
@@ -48,7 +44,7 @@
      * Sets the first value of the math we will do
      */
     private function setFirstValue($value) {
-      $this->firstValue = $value;
+      $this->arrayValues[0] = $value;
     }
 
     protected function setMultipleValues($valueArrays) {
@@ -64,14 +60,14 @@
      * @return [float] [The first value of the math]
      */
     public function getFirstValue() {
-      return($this->firstValue);
+      return($this->arrayValues[0]);
     }
 
     /**
      * Sets the second vlaue of our math
      */
     private function setSecondValue($value) {
-      $this->secondValue = $value;
+      $this->arrayValues[1] = $value;
     }
 
     /**
@@ -79,7 +75,7 @@
      * @return [float] [The second value of our math]
      */
     public function getSecondValue() {
-      return($this->secondValue);
+      return($this->arrayValues[1]);
     }
   }
 
