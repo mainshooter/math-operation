@@ -9,12 +9,12 @@
      * @return [float] [The result from the math]
      */
     public function calculate() {
-      if ($this->getMultipleValues() == false) {
+      if ($this->checkIfWeHaveMoreThanTwoValues() == false) {
         $this->setOperationResult($this->getFirstValue() - $this->getSecondValue());
         return($this->getOperationResult());
       }
 
-      else {
+      else if ($this->checkIfWeHaveMoreThanTwoValues() == true){
         // We want to do it with multiple values
         $this->setOperationResult($this->getOperationResult()[0]);
         // To prefent that we will do somethong wrong with the first value

@@ -4,7 +4,7 @@
   require_once 'Subtract.class.php';
 
   $AddUp = new addUp([32,54,775]);
-  $Subtract = new Subtract([32,5,32]);
+  $Subtract = new Subtract(2,1);
 
   echo $AddUp->calculate();
   echo "<br>";
