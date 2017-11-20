@@ -15,6 +15,7 @@
 
     public function add() {
       $this->operationResult = $this->getFirstValue() + $this->getSecondValue();
+      return($this->operationResult);
     }
   }
 
