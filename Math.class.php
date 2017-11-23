@@ -12,6 +12,7 @@
 
       if (is_array($firstValue)) {
         $this->setMultipleValues($firstValue);
+        $this->setOperationResult($this->getFirstValue());
       }
 
       else {
@@ -65,6 +66,16 @@
     public function getSecondValue() {
       return($this->arrayValues[1]);
     }
+
+    public function calculate() {
+      // We want to do it with multiple values
+      for ($i=1; $i < count($this->getMultipleValues()); $i++) {
+        $this->setOperationResult($this->cal($this->getOperationResult(), $this->getMultipleValues()[$i]));
+      }
+    return($this->getOperationResult());
+    }
+
+    abstract protected function cal($result, $newNumber);
   }
 
 
